@@ -1,0 +1,25 @@
+.title {
+	font-size: 40px;
+	margin-left: 30px;
+	margin-bottom: 20px
+}
+
+.movieList {
+	margin-left: 30px;
+	margin-bottom: 20px;
+	border: solid;
+	margin-right: 100px;
+	background-color: pink
+}
+
+ul {
+	border: 2px solid black;
+	margin-right: 400px;
+	background-color: lightblue
+}
+
+li {
+	
+}
+
+

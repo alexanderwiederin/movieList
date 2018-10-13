@@ -1,9 +1,9 @@
 import MovieListEntry from './MovieListEntry.js';
 
-var MovieList = (props) => (
+var MovieList = ({movies, selectedMovies, toggleWatchStatus}) => (
 	<ul className="movie-list">
-	{!!props.selectedMovies ? props.movies.map((movie) =>
-		<MovieListEntry key={movie.title} movie={movie}/>) : <li>no movie found</li>}
+	{!!selectedMovies ? movies.map((movie) =>
+		<MovieListEntry key={movie.title} movie={movie} toggleWatchStatus={toggleWatchStatus}/>) : <li>no movie found</li>}
 	</ul>
 );
 

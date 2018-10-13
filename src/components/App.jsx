@@ -25,7 +25,6 @@ class App extends React.Component {
     });
 
     var selectedMovies = movies.filter((movie) => movie.display === true).length;
-
     this.setState({movies, selectedMovies});
   }
 
@@ -38,11 +37,13 @@ class App extends React.Component {
 
     var movies = this.state.movies.slice();
     movies.push(movieObject);
-
     var selectedMovies = movies.filter((movie) => movie.display === true).length;
-
     this.setState({movies, selectedMovies});
 
+  }
+
+  toggleWatchStatus(video) {
+    video.status = !video.status;
   }
 
   render() {
@@ -54,7 +55,7 @@ class App extends React.Component {
         <Nav handleSearch={this.handleSearch.bind(this)} addMovie={this.addMovie.bind(this)}/>
         </div>
         <div>
-          <MovieList movies={this.state.movies} selectedMovies={this.state.selectedMovies}/>
+          <MovieList movies={this.state.movies} selectedMovies={this.state.selectedMovies} toggleWatchStatus={this.toggleWatchStatus.bind()}/>
         </div>
       </div>
     );

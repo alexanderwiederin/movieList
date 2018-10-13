@@ -1,10 +1,10 @@
 
 var movies = [
-  {title: 'Mean Girls', display: true},
-  {title: 'Hackers' , display: true},
-  {title: 'The Grey' , display: true},
-  {title: 'Sunshine' , display: true},
-  {title: 'Ex Machina' , display: true},
+  {title: 'Mean Girls', display: true, status: true},
+  {title: 'Hackers' , display: true, status: true},
+  {title: 'The Grey' , display: true, status: true},
+  {title: 'Sunshine' , display: true, status: true},
+  {title: 'Ex Machina' , display: true, status: true},
 ];
 
 export default movies;

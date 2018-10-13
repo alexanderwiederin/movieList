@@ -1,8 +1,8 @@
-var MovieListEntry = ({key, movie}) => {
-	console.log('movie: ', movie);
+var MovieListEntry = ({key, movie, toggleWatchStatus}) => {
 	return (
-		<div>
-		  {movie.display ? <li className="movie-list-entry">{movie.title}</li> : null}
+		<div className="movie-list-entry">
+		  {movie.display ? <li >{movie.title}</li> : null}
+		  {movie.display && movie.status ? <button onClick={()=> toggleWatchStatus(movie)}>watch</button> : null}
 		</div>
 	 )
 }
@@ -14,4 +14,6 @@ MovieListEntry.propTypes = {
 };
 
 export default MovieListEntry;
+
+// <button className="watchButton">To Watch</button>
 

@@ -43,7 +43,7 @@ class App extends React.Component {
   }
 
   toggleWatchStatus(video) {
-    video.status = !video.status;
+    console.log('test');
   }
 
   render() {
@@ -55,7 +55,7 @@ class App extends React.Component {
         <Nav handleSearch={this.handleSearch.bind(this)} addMovie={this.addMovie.bind(this)}/>
         </div>
         <div>
-          <MovieList movies={this.state.movies} selectedMovies={this.state.selectedMovies} toggleWatchStatus={this.toggleWatchStatus.bind()}/>
+          <MovieList movies={this.state.movies} selectedMovies={this.state.selectedMovies} toggleWatchStatus={this.toggleWatchStatus.bind(this)}/>
         </div>
       </div>
     );

@@ -3,7 +3,7 @@ import MovieListEntry from './MovieListEntry.js';
 var MovieList = ({movies, selectedMovies, toggleWatchStatus}) => (
 	<ul className="movie-list">
 	{!!selectedMovies ? movies.map((movie) =>
-		<MovieListEntry key={movie.title} movie={movie} toggleWatchStatus={toggleWatchStatus}/>) : <li>no movie found</li>}
+		<MovieListEntry key={movie.title} movie={movie}/>) : <li>no movie found</li>}
 	</ul>
 );
 

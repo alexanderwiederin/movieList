@@ -1,10 +1,32 @@
-var MovieListEntry = ({key, movie, toggleWatchStatus}) => {
-	return (
-		<div className="movie-list-entry">
-		  {movie.display ? <li >{movie.title}</li> : null}
-		  {movie.display && movie.status ? <button onClick={()=> toggleWatchStatus(movie)}>watch</button> : null}
-		</div>
-	 )
+class MovieListEntry extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			watch: true
+		};
+	}
+
+	handleStatusChange() {
+		var currentState = this.state.watch;
+		this.setState({
+			watch: !currentState
+		});
+	}
+
+	render() {
+		return (
+			<div className="movie-list-entry">
+			  <div>
+		      {this.props.movie.display ? <li >{this.props.movie.title}</li> : null}
+		    </div>
+		    <div>
+		      {this.state ? <button onClick={() => handleStatusChange()}>watch</button> : null}
+		    </div>
+		  </div>
+		)
+	}
+
 }
 
 

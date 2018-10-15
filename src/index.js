@@ -3,6 +3,6 @@ import App from './components/App.js';
 import movieData from './data/movieData.js';
 
 ReactDOM.render(
-  <App movies={movieData}/>,
+  <App />,
   document.getElementById('app')
 );

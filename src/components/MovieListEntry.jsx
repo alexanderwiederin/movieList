@@ -1,3 +1,4 @@
+
 class MovieListEntry extends React.Component {
 	constructor(props) {
 		super(props);
@@ -8,6 +9,7 @@ class MovieListEntry extends React.Component {
 	}
 
 	handleStatusChange() {
+		console.log('test')
 		var currentState = this.state.watch;
 		this.setState({
 			watch: !currentState
@@ -19,10 +21,13 @@ class MovieListEntry extends React.Component {
 			<div className="movie-list-entry">
 			  <div>
 		      {this.props.movie.display ? <li >{this.props.movie.title}</li> : null}
-		    </div>
-		    <div>
-		      {this.state ? <button onClick={() => handleStatusChange()}>watch</button> : null}
-		    </div>
+		      </div>
+		      <div>
+		      {this.props.movie.display && this.state.watch ? <button onClick={this.handleStatusChange.bind(this)}>Watch</button> : null}
+		      </div>
+		      <div>
+		      {this.props.movie.display && !this.state.watch ? <button onClick={this.handleStatusChange.bind(this)}>Watched</button> : null}
+		      </div>
 		  </div>
 		)
 	}
@@ -38,4 +43,5 @@ MovieListEntry.propTypes = {
 export default MovieListEntry;
 
 // <button className="watchButton">To Watch</button>
+
 

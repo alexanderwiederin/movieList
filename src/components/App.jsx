@@ -5,13 +5,21 @@ import Nav from './Search.js';
 
 class App extends React.Component {
 
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
-      movies: props.movies,
-      selectedMovies: props.movies.filter((movie) => movie.display === true).length
+      movies: [
+      {title: 'Mean Girls', display: true},
+      {title: 'Hackers' , display: true},
+      {title: 'The Grey' , display: true},
+      {title: 'Sunshine' , display: true},
+      {title: 'Ex Machina' , display: true},
+      ],
+      
+      selectedMovies: 5
     };
+    console.log(this.state.movies);
   }
 
   handleSearch() {
@@ -55,7 +63,7 @@ class App extends React.Component {
         <Nav handleSearch={this.handleSearch.bind(this)} addMovie={this.addMovie.bind(this)}/>
         </div>
         <div>
-          <MovieList movies={this.state.movies} selectedMovies={this.state.selectedMovies} toggleWatchStatus={this.toggleWatchStatus.bind(this)}/>
+          <MovieList movies={this.state.movies} selectedMovies={this.state.selectedMovies} />
         </div>
       </div>
     );

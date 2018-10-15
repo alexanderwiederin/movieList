@@ -1,4 +1,4 @@
-var Nav = ({handleSearch, addMovie}) => {
+var Nav = ({handleSearch, addMovie, toggleWatchStatus}) => {
 	return (
 	<div>
 	  <div>
@@ -8,6 +8,10 @@ var Nav = ({handleSearch, addMovie}) => {
 	  <div>
 	    <input id="searchBar" placeholder="search..."></input>
 	    <button onClick={handleSearch}>search</button>
+	  </div>
+	  <div>
+	    <button>watch</button>
+	    <button>watched</button>
 	  </div>
 	</div>
 	)

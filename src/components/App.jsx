@@ -1,6 +1,6 @@
 
 import MovieList from './MovieList.js';
-import Nav from './Search.js';
+import Nav from './Nav.js';
 
 
 class App extends React.Component {
@@ -17,7 +17,9 @@ class App extends React.Component {
       {title: 'Ex Machina' , display: true},
       ],
       
-      selectedMovies: 5
+      selectedMovies: 5,
+
+      watchStatus: null
     };
     console.log(this.state.movies);
   }
@@ -50,7 +52,7 @@ class App extends React.Component {
 
   }
 
-  toggleWatchStatus(video) {
+  setWatchStatusToTrue() {
     console.log('test');
   }
 

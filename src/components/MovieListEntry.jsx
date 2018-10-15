@@ -9,7 +9,6 @@ class MovieListEntry extends React.Component {
 	}
 
 	handleStatusChange() {
-		console.log('test')
 		var currentState = this.state.watch;
 		this.setState({
 			watch: !currentState
